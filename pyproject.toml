@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "perp-simulation"
+version = "0.1.0"
+description = ""
+authors = ["v-bonilla <v-bonilla@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = {extras = ["feather"], version = "^2.2.1"}
+plotly = "^5.20.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+black = "^24.3.0"
+pytest-mock = "^3.14.0"
+
+[tool.poetry.group.jupyter]
+optional = true
+
+[tool.poetry.group.jupyter.dependencies]
+jupyter = "^1.0.0"
+
+[tool.pytest.ini_options]
+log_cli_level = "DEBUG"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
